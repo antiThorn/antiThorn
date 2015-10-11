@@ -3,6 +3,7 @@ If WScript.Arguments.length =0 Then
 	'Pass a bogus argument with leading blank space, say [ uac]
 	objShell.ShellExecute "wscript.exe", Chr(34) & _
 	WScript.ScriptFullName & Chr(34) & " uac", "", "runas", 1
+
 Else
 	Dim WshShell, s_start, s_stop
 	Set WshShell = WScript.CreateObject("WScript.Shell")
@@ -17,7 +18,6 @@ Else
 	& "'Win32_Process'")
 	s_start = True
 	s_stop = False
-	'wscript.echo "Loop"
 
 	Do
 		If s_start Then
