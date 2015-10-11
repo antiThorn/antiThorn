@@ -21,9 +21,11 @@ Else
 
 	Do
 		If s_start Then
-' ПУТЬ ДО start.bat !!!  при этом тройные ковычки схронить.
-			Return = WshShell.Run("C:\_unsystem\antiThornBDO\start.bat", 0, true)
-' ПУТЬ ДО ЛАУЧЕРА!!! ЕСЛИ У ВАС ОН ОТЛИЧНЫЙ ОС СТАДРАТНОГО ТО ПОМЕНЯЙТЕ!!! Можно скопировать путь в свойстве ярлыка, при этом тройные ковычки схронить.
+		
+		' ПУТЬ ДО start.bat !!! Вместо "путь до" напишите ваш путь, при этом тройные ковычки схронить.
+			Return = WshShell.Run("""путь до\start.bat""", 0, true)
+			
+		' ПУТЬ ДО ЛАУЧЕРА!!! ЕСЛИ У ВАС ОН ОТЛИЧНЫЙ ОС СТАДРАТНОГО ТО ПОМЕНЯЙТЕ!!! Можно скопировать путь в свойстве ярлыка, при этом тройные ковычки схронить.
 			Return = WshShell.Run("""C:\Program Files (x86)\QGNA\qGNA.exe""", 1, true)
 
 			s_start = False
@@ -33,8 +35,10 @@ Else
 
 		If objLatestEvent.Path_.Class ="__InstanceDeletionEvent" Then
 			If objLatestEvent.TargetInstance.Name="qGNA.exe" Then
-' ПУТЬ ДО stop.bat !!!  при этом тройные ковычки схронить.
-				Return = WshShell.Run("C:\_unsystem\antiThornBDO\stop.bat", 0, true)
+			
+			' ПУТЬ ДО stop.bat !!! Вместо "путь до" напишите ваш путь, при этом тройные ковычки схронить.
+				Return = WshShell.Run("""путь до\stop.bat""", 0, true)
+			
 				s_stop = True
 			End If
 		End If
